@@ -1,0 +1,8 @@
+prefix=/home/pi/ROS-Feature-Tracking/install
+
+Name: vision_tracking
+Description: Description of vision_tracking
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/ROS-Feature-Tracking/install/lib 
+Requires: 

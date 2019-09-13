@@ -1,0 +1,8 @@
+prefix=/home/pi/ROS-Feature-Tracking/devel
+
+Name: gimbal_control
+Description: Description of gimbal_control
+Version: 0.0.0
+Cflags: 
+Libs: -L/home/pi/ROS-Feature-Tracking/devel/lib 
+Requires: 

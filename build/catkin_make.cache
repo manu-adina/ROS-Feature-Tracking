@@ -1,0 +1,2 @@
+gimbal_control:vision_tracking
+-DCATKIN_DEVEL_PREFIX=/home/pi/ROS-Feature-Tracking/devel -DCMAKE_INSTALL_PREFIX=/home/pi/ROS-Feature-Tracking/install -G Unix Makefiles

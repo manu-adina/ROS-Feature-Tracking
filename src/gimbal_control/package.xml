@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<package format="2">
+  <name>gimbal_control</name>
+  <version>1.0.0</version>
+  <description>The gimbal control package sends commands to the gimbal through Arduino. </description>
+
+  <maintainer email="manu@remsense.com.au">Manu Adina-Zada</maintainer>
+
+  <license>MIT</license>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+  <build_depend>std_msgs</build_depend>
+
+  <exec_depend>roscpp</exec_depend>
+  <exec_depend>std_msgs</exec_depend>
+
+</package>
