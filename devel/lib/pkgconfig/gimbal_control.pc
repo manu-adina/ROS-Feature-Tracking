@@ -2,7 +2,7 @@ prefix=/home/pi/ROS-Feature-Tracking/devel
 
 Name: gimbal_control
 Description: Description of gimbal_control
-Version: 0.0.0
-Cflags: 
-Libs: -L/home/pi/ROS-Feature-Tracking/devel/lib 
-Requires: 
+Version: 1.0.0
+Cflags: -I/home/pi/ROS-Feature-Tracking/src/gimbal_control/include
+Libs: -L/home/pi/ROS-Feature-Tracking/devel/lib -li2c_bus
+Requires: roscpp

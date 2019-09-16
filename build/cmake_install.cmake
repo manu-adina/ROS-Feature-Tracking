@@ -130,8 +130,8 @@ endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/pi/ROS-Feature-Tracking/build/gimbal_control/cmake_install.cmake")
   include("/home/pi/ROS-Feature-Tracking/build/vision_tracking/cmake_install.cmake")
+  include("/home/pi/ROS-Feature-Tracking/build/gimbal_control/cmake_install.cmake")
 
 endif()
 

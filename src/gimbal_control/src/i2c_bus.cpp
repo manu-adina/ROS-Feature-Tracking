@@ -1,18 +1,20 @@
+#include "gimbal_control/i2c_bus.h"
+#include <iostream>
+#include "ros/ros.h"
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
-#include <string.h>
+#include <string>
 #include <errno.h>
-#include <ros/console.h>
-#include <cstring.h> // For c_str()
+//#include <cstring.h> // For c_str()
 
 I2CBus::I2CBus() {};
 
-int I2C::Begin(std::string::port, int arduino_addr) {
+int I2CBus::Begin(std::string::port, uint16_t arduino_addr) {
     _port = port;
     _arduino_addr = arduino_addr;
 
-    if((_file = open(port.c_str(), O_RDWR)) < 0) 
+    if((_file = open(port.c_str(), O_RDWR)) < 0) {
         ROS_ERROR("Failed to Open I2C Bus " << strerror(errno));
         return -1;
     }
@@ -23,14 +25,13 @@ int I2C::Begin(std::string::port, int arduino_addr) {
     }
 }
 
-I2C::Send(uint16_t pan, uint16_t tilt, uint16_t roll) {
-    uint16_t buf[3] = {0};
+int I2CBus::Send(const vision_tracking::Position::ConstPtr &msg) {
+    uint16_t buf[2] = {0};
 
-    buf[0] = pan;
-    buf[1] = tilt;
-    buf[2] = roll;
+    buf[0] = msg->position_x;
+    buf[1] = msg->position_y;
 
-    if(write(file, buf, 6) != 6) {
+    if(write(_file, buf, 4) != 4) {
         ROS_ERROR("Failed to Write " << strerror(errno));
         return -1;
     }

@@ -68,6 +68,18 @@ install/strip/fast: preinstall/fast
 	/usr/bin/cmake -DCMAKE_INSTALL_DO_STRIP=1 -P cmake_install.cmake
 .PHONY : install/strip/fast
 
+# Special rule for the target install
+install: preinstall
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install
+
+# Special rule for the target install
+install/fast: preinstall/fast
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
+	/usr/bin/cmake -P cmake_install.cmake
+.PHONY : install/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -123,18 +135,6 @@ list_install_components/fast: list_install_components
 
 .PHONY : list_install_components/fast
 
-# Special rule for the target install
-install: preinstall
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install
-
-# Special rule for the target install
-install/fast: preinstall/fast
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Install the project..."
-	/usr/bin/cmake -P cmake_install.cmake
-.PHONY : install/fast
-
 # The main all target
 all: cmake_check_build_system
 	cd /home/pi/ROS-Feature-Tracking/build && $(CMAKE_COMMAND) -E cmake_progress_start /home/pi/ROS-Feature-Tracking/build/CMakeFiles /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/progress.marks
@@ -168,19 +168,91 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
-gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/rule:
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
-.PHONY : gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
+gimbal_control/CMakeFiles/GimbalControlNode.dir/rule:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/GimbalControlNode.dir/rule
+.PHONY : gimbal_control/CMakeFiles/GimbalControlNode.dir/rule
 
 # Convenience name for target.
-_catkin_empty_exported_target: gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/rule
+GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/rule
 
-.PHONY : _catkin_empty_exported_target
+.PHONY : GimbalControlNode
 
 # fast build rule for target.
-_catkin_empty_exported_target/fast:
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/build.make gimbal_control/CMakeFiles/_catkin_empty_exported_target.dir/build
-.PHONY : _catkin_empty_exported_target/fast
+GimbalControlNode/fast:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/build
+.PHONY : GimbalControlNode/fast
+
+# Convenience name for target.
+gimbal_control/CMakeFiles/i2c_bus.dir/rule:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/i2c_bus.dir/rule
+.PHONY : gimbal_control/CMakeFiles/i2c_bus.dir/rule
+
+# Convenience name for target.
+i2c_bus: gimbal_control/CMakeFiles/i2c_bus.dir/rule
+
+.PHONY : i2c_bus
+
+# fast build rule for target.
+i2c_bus/fast:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/build
+.PHONY : i2c_bus/fast
+
+src/gimbal_communication_node.o: src/gimbal_communication_node.cpp.o
+
+.PHONY : src/gimbal_communication_node.o
+
+# target to build an object file
+src/gimbal_communication_node.cpp.o:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o
+.PHONY : src/gimbal_communication_node.cpp.o
+
+src/gimbal_communication_node.i: src/gimbal_communication_node.cpp.i
+
+.PHONY : src/gimbal_communication_node.i
+
+# target to preprocess a source file
+src/gimbal_communication_node.cpp.i:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.i
+.PHONY : src/gimbal_communication_node.cpp.i
+
+src/gimbal_communication_node.s: src/gimbal_communication_node.cpp.s
+
+.PHONY : src/gimbal_communication_node.s
+
+# target to generate assembly for a file
+src/gimbal_communication_node.cpp.s:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.s
+.PHONY : src/gimbal_communication_node.cpp.s
+
+src/i2c_bus.o: src/i2c_bus.cpp.o
+
+.PHONY : src/i2c_bus.o
+
+# target to build an object file
+src/i2c_bus.cpp.o:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.o
+.PHONY : src/i2c_bus.cpp.o
+
+src/i2c_bus.i: src/i2c_bus.cpp.i
+
+.PHONY : src/i2c_bus.i
+
+# target to preprocess a source file
+src/i2c_bus.cpp.i:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.i
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.i
+.PHONY : src/i2c_bus.cpp.i
+
+src/i2c_bus.s: src/i2c_bus.cpp.s
+
+.PHONY : src/i2c_bus.s
+
+# target to generate assembly for a file
+src/i2c_bus.cpp.s:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.s
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.s
+.PHONY : src/i2c_bus.cpp.s
 
 # Help Target
 help:
@@ -189,13 +261,20 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... install/strip"
+	@echo "... install"
+	@echo "... GimbalControlNode"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... _catkin_empty_exported_target"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
+	@echo "... i2c_bus"
 	@echo "... list_install_components"
-	@echo "... install"
+	@echo "... src/gimbal_communication_node.o"
+	@echo "... src/gimbal_communication_node.i"
+	@echo "... src/gimbal_communication_node.s"
+	@echo "... src/i2c_bus.o"
+	@echo "... src/i2c_bus.i"
+	@echo "... src/i2c_bus.s"
 .PHONY : help
 
 

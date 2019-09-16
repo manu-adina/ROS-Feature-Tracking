@@ -91,9 +91,9 @@ endif()
 # flag project as catkin-based to distinguish if a find_package()-ed project is a catkin project
 set(vision_tracking_FOUND_CATKIN_PROJECT TRUE)
 
-if(NOT " " STREQUAL " ")
+if(NOT "include " STREQUAL " ")
   set(vision_tracking_INCLUDE_DIRS "")
-  set(_include_dirs "")
+  set(_include_dirs "include")
   if(NOT " " STREQUAL " ")
     set(_report "Check the issue tracker '' and consider creating a ticket if the problem has not been reported yet.")
   elseif(NOT " " STREQUAL " ")
@@ -154,7 +154,7 @@ foreach(library ${libraries})
   endif()
 endforeach()
 
-set(vision_tracking_EXPORTED_TARGETS "")
+set(vision_tracking_EXPORTED_TARGETS "vision_tracking_generate_messages_cpp;vision_tracking_generate_messages_eus;vision_tracking_generate_messages_lisp;vision_tracking_generate_messages_nodejs;vision_tracking_generate_messages_py")
 # create dummy targets for exported code generation targets to make life of users easier
 foreach(t ${vision_tracking_EXPORTED_TARGETS})
   if(NOT TARGET ${t})
@@ -162,7 +162,7 @@ foreach(t ${vision_tracking_EXPORTED_TARGETS})
   endif()
 endforeach()
 
-set(depends "")
+set(depends "message_runtime")
 foreach(depend ${depends})
   string(REPLACE " " ";" depend_list ${depend})
   # the package name of the dependency must be kept in a unique variable so that it is not overwritten in recursive calls
@@ -191,7 +191,7 @@ foreach(depend ${depends})
   list(APPEND vision_tracking_EXPORTED_TARGETS ${${vision_tracking_dep}_EXPORTED_TARGETS})
 endforeach()
 
-set(pkg_cfg_extras "")
+set(pkg_cfg_extras "vision_tracking-msg-extras.cmake")
 foreach(extra ${pkg_cfg_extras})
   if(NOT IS_ABSOLUTE ${extra})
     set(extra ${vision_tracking_DIR}/${extra})

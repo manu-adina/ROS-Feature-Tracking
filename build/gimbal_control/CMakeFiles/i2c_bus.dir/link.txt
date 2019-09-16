@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libi2c_bus.so -o /home/pi/ROS-Feature-Tracking/devel/lib/libi2c_bus.so CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.o -l&{catkin_LIBRARIES} 
