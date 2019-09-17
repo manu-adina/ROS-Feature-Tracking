@@ -25,7 +25,6 @@ int main(int argc, char **argv) {
 
     //ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, PID::Compare, &PID);
 
-    //TODO: Params -- Not now.
     //TODO: Messages -- now
     //TODO: Package.xml
 

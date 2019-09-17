@@ -28,6 +28,16 @@ string
 vision_tracking/Position.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/vision_tracking/Position.h
 
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_communication_node.cpp
+gimbal_control/i2c_bus.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/i2c_bus.h
+vision_tracking/Position.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/vision_tracking/Position.h
+ros/console.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/console.h
+ros/ros.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/ros.h
+
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
 gimbal_control/i2c_bus.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/i2c_bus.h
