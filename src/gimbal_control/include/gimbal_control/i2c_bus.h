@@ -5,8 +5,7 @@ class I2CBus {
     public:
         I2CBus();
         int Begin(std::string port, uint16_t arduino_addr);
-        int Send(const vision_tracking::Position::ConstPtr &msg);
-        ~I2CBus();
+        void Send(const vision_tracking::Position::ConstPtr &msg);
     private:
         std::string _port;
         int _file;

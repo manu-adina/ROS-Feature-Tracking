@@ -26,6 +26,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/i2c_bus.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

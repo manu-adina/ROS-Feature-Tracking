@@ -629,10 +629,10 @@ clean: vision_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean
 
 # All Build rule for target.
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_nodejs.dir/all
+vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_cpp.dir/all
+vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_py.dir/all
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_lisp.dir/all
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_eus.dir/all
-vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_py.dir/all
-vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_cpp.dir/all
 	$(MAKE) -f vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build.make vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/depend
 	$(MAKE) -f vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build.make vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num= "Built target vision_tracking_generate_messages"
@@ -1170,7 +1170,7 @@ gimbal_control/preinstall:
 # Target rules for target gimbal_control/CMakeFiles/GimbalControlNode.dir
 
 # All Build rule for target.
-gimbal_control/CMakeFiles/GimbalControlNode.dir/all:
+gimbal_control/CMakeFiles/GimbalControlNode.dir/all: gimbal_control/CMakeFiles/i2c_bus.dir/all
 	$(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/depend
 	$(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=1,2,3 "Built target GimbalControlNode"
@@ -1183,7 +1183,7 @@ all: gimbal_control/CMakeFiles/GimbalControlNode.dir/all
 
 # Build rule for subdir invocation for target.
 gimbal_control/CMakeFiles/GimbalControlNode.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/ROS-Feature-Tracking/build/CMakeFiles 3
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/ROS-Feature-Tracking/build/CMakeFiles 5
 	$(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/GimbalControlNode.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/ROS-Feature-Tracking/build/CMakeFiles 0
 .PHONY : gimbal_control/CMakeFiles/GimbalControlNode.dir/rule

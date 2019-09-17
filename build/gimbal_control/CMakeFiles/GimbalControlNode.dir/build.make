@@ -94,6 +94,26 @@ GimbalControlNode_EXTERNAL_OBJECTS =
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ROS-Feature-Tracking/devel/lib/libi2c_bus.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/libroscpp.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libpthread.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_signals.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/librosconsole.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/librosconsole_log4cxx.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/librosconsole_backend_interface.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/liblog4cxx.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_regex.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/libxmlrpcpp.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/libroscpp_serialization.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/librostime.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/libcpp_common.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_system.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_thread.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_chrono.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_date_time.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_atomic.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode"
 	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GimbalControlNode.dir/link.txt --verbose=$(VERBOSE)

@@ -4,9 +4,9 @@
 #include "ros/ros.h"
 
 int main(int argc, char **argv) {
-    ros::NodeHandle gimbal_control_nh;
-    ros::init(argc, argv, "gimbal_control_node");
 
+    ros::init(argc, argv, "gimbal_control_node");
+    ros::NodeHandle gimbal_control_nh;
 
     // Get params from the params file.
     std::string port = "/dev/i2c-1";
@@ -16,9 +16,14 @@ int main(int argc, char **argv) {
 
     // Start an i2c bus
     I2CBus i2c_bus;
-    int a = i2c_bus.Begin(port, arduino_addr);
+    if(i2c_bus.Begin(port, arduino_addr) != 0) {
+        return -1;
+    };
 
-    ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, &I2CBus::Send, &i2c_bus); 
+    ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, &I2CBus::Send, &i2c_bus);
+
+
+    //ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, PID::Compare, &PID);
 
     //TODO: Params -- Not now.
     //TODO: Messages -- now

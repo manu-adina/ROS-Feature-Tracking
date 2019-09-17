@@ -315,9 +315,6 @@ gimbal_control_BINARY_DIR:STATIC=/home/pi/ROS-Feature-Tracking/build/gimbal_cont
 //Value Computed by CMake
 gimbal_control_SOURCE_DIR:STATIC=/home/pi/ROS-Feature-Tracking/src/gimbal_control
 
-//Dependencies for the target
-i2c_bus_LIB_DEPENDS:STATIC=general;&{catkin_LIBRARIES};
-
 //Path to a library.
 lib:FILEPATH=/home/pi/ros_catkin_ws/install_isolated/lib/libxmlrpcpp.so
 
