@@ -23,7 +23,7 @@ class PiVideoStream:
         t.start()
         return self
 
-    def update(sef):
+    def update(self):
         for f in self.stream:
             self.frame = f.array
             self.rawCapture.truncate(0)
