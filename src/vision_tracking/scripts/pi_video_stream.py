@@ -16,7 +16,6 @@ class PiVideoStream:
         self.frame = None
         self.stopped = False
 
-
     def start(self):
         t = Thread(target=self.update, args=())
         t.daemon = True
