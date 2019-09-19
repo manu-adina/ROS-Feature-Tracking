@@ -4,7 +4,7 @@ from threading import Thread
 import cv2
 
 class PiVideoStream:
-    def __init__(self, resolution=(480,320), framerate=15):
+    def __init__(self, resolution=(640,480), framerate=20):
         self.camera = PiCamera()
 
         self.camera.resolution = resolution

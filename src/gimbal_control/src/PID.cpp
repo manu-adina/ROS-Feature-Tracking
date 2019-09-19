@@ -9,17 +9,17 @@ void PID::Begin(double Kp, double Ki, double Kd) {
     _Ki = Ki;
     _Kd = Kd;
 
-    p_error = 0;
-    i_error = 0;
-    d_error = 0;
+    _p_error = 0;
+    _i_error = 0;
+    _d_error = 0;
 }
 
-void PID::Update(cte) {
-    d_error = cte - p_error;
-    p_error = cte;
-    i_error += cte;
+void PID::Update(int cte) {
+    _d_error = cte - _p_error;
+    _p_error = cte;
+    _i_error += cte;
 }
 
 double PID::TotalError() {
-    return -_Kp * p_error - _kd * d_error - _Ki * i_error;
+    return -_Kp * _p_error - _Kd * _d_error - _Ki * _i_error;
 }

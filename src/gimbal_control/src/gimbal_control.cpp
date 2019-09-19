@@ -1,11 +1,11 @@
-#include "/gimbal_control/gimbal_control.h"
+#include "gimbal_control/gimbal_control.h"
 
 #define COMMAND_OFFSET 1023
 #define MAX_COMMAND 2037
 #define MIN_COMMAND 0
 
 
-GimbalControl::GimbalControl(uint16_t arduino_address, int capture_resolution_x, std::string port) {
+GimbalControl::GimbalControl() {
     /**
      * arduino
      * resolution x
@@ -15,19 +15,23 @@ GimbalControl::GimbalControl(uint16_t arduino_address, int capture_resolution_x,
      * pid vars y
     **/
 
-    _arduino_address = arduino_address;
-    _centre_point_x = capture_resolution_x / 2;
-    _centre_point_y = capture_resolution_y / 2;
+    _centre_point_x = 320;
+    _centre_point_y = 240;
+    uint16_t arduino_address = 0x04;
+    std::string port = "/dev/i2c-1";
 
-    _i2c_bus.Begin(_port, _arduino_address);
-    _pid_x.Begin(); // TODO
-    _pid_y.Begin(); // TODO
+    double Kp_x, Kp_y = 5.0;
+    double Ki_x, Ki_y = 1.0;
+    double Kd_x, Kd_y = 1.0;
+
+    _i2c_bus.Begin(port, arduino_address);
+    _pid_x.Begin(Kp_x,Ki_x,Kd_x);
+    _pid_y.Begin(Kp_y,Ki_y,Kd_y);
 
     ros::NodeHandle gimbal_control_nh;
     ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, &I2CBus::Send, &i2c_bus); //TODO
-    ros::spin(); //TODO Should work.
+    ros::spin();
 }
-
 
 void GimbalControl::compareCallBack(const vision_tracking::Position::ConstPtr &msg) {
     // Get vision_position from the message.

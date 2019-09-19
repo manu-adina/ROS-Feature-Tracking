@@ -34,6 +34,9 @@ void I2CBus::Send(uint16_t speed_command_pan, uint16_t speed_command_tilt) {
 
     uint16_t buf[2] = {0};
 
+    buf[0] = speed_command_pan;
+    buf[1] = speed_command_tilt;
+
     if(write(_file, buf, 4) != 4) {
         ROS_ERROR("Failed to Write (%d): %s ", errno, strerror(errno));
     }

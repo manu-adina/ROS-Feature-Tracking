@@ -597,17 +597,17 @@ GimbalControlNode/fast:
 .PHONY : GimbalControlNode/fast
 
 #=============================================================================
-# Target rules for targets named i2c_bus
+# Target rules for targets named GimbalControlLib
 
 # Build rule for target.
-i2c_bus: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 i2c_bus
-.PHONY : i2c_bus
+GimbalControlLib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 GimbalControlLib
+.PHONY : GimbalControlLib
 
 # fast build rule for target.
-i2c_bus/fast:
-	$(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/build
-.PHONY : i2c_bus/fast
+GimbalControlLib/fast:
+	$(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/build
+.PHONY : GimbalControlLib/fast
 
 # Help Target
 help:
@@ -655,7 +655,7 @@ help:
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
 	@echo "... GimbalControlNode"
-	@echo "... i2c_bus"
+	@echo "... GimbalControlLib"
 .PHONY : help
 
 

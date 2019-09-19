@@ -8,7 +8,19 @@ catkin_package(
 )
 include_directories(include ${catkin_INCLUDE_DIRS})
 
-add_executable(GimbalControlNode src/gimbal_communication_node.cpp src/i2c_bus.cpp)
-add_library(i2c_bus src/i2c_bus.cpp)
-target_link_libraries(GimbalControlNode i2c_bus ${catkin_LIBRARIES})
+add_executable(
+    GimbalControlNode
+    src/gimbal_communication_node.cpp
+    src/i2c_bus.cpp
+    src/PID.cpp
+    src/gimbal_control.cpp
+)
+
+add_library(
+    GimbalControlLib
+    src/i2c_bus.cpp
+    src/PID.cpp
+    src/gimbal_control.cpp
+)
+target_link_libraries(GimbalControlNode GimbalControlLib ${catkin_LIBRARIES})
 

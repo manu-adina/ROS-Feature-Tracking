@@ -22,7 +22,7 @@ def vision_tracking_node():
     upper_boundary = (64, 255, 255)
 
     # For the visual line.
-    pts = deque(maxlen=64)
+    pts = deque(maxlen=30)
 
     # Start webcam.
     vs = PiVideoStream()
@@ -76,7 +76,7 @@ def vision_tracking_node():
         if key == ord("q"):
             break
 
-        rospy.loginfo(msg)
+        # rospy.loginfo(msg)
         pub.publish(msg)
         rate.sleep()
 

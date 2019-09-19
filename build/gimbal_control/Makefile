@@ -80,6 +80,17 @@ install/fast: preinstall/fast
 	/usr/bin/cmake -P cmake_install.cmake
 .PHONY : install/fast
 
+# Special rule for the target edit_cache
+edit_cache:
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
+	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
+.PHONY : edit_cache
+
+# Special rule for the target edit_cache
+edit_cache/fast: edit_cache
+
+.PHONY : edit_cache/fast
+
 # Special rule for the target install/local
 install/local: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Installing only the local directory..."
@@ -102,17 +113,6 @@ test:
 test/fast: test
 
 .PHONY : test/fast
-
-# Special rule for the target edit_cache
-edit_cache:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "No interactive CMake dialog available..."
-	/usr/bin/cmake -E echo No\ interactive\ CMake\ dialog\ available.
-.PHONY : edit_cache
-
-# Special rule for the target edit_cache
-edit_cache/fast: edit_cache
-
-.PHONY : edit_cache/fast
 
 # Special rule for the target rebuild_cache
 rebuild_cache:
@@ -183,19 +183,49 @@ GimbalControlNode/fast:
 .PHONY : GimbalControlNode/fast
 
 # Convenience name for target.
-gimbal_control/CMakeFiles/i2c_bus.dir/rule:
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/i2c_bus.dir/rule
-.PHONY : gimbal_control/CMakeFiles/i2c_bus.dir/rule
+gimbal_control/CMakeFiles/GimbalControlLib.dir/rule:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f CMakeFiles/Makefile2 gimbal_control/CMakeFiles/GimbalControlLib.dir/rule
+.PHONY : gimbal_control/CMakeFiles/GimbalControlLib.dir/rule
 
 # Convenience name for target.
-i2c_bus: gimbal_control/CMakeFiles/i2c_bus.dir/rule
+GimbalControlLib: gimbal_control/CMakeFiles/GimbalControlLib.dir/rule
 
-.PHONY : i2c_bus
+.PHONY : GimbalControlLib
 
 # fast build rule for target.
-i2c_bus/fast:
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/build
-.PHONY : i2c_bus/fast
+GimbalControlLib/fast:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/build
+.PHONY : GimbalControlLib/fast
+
+src/PID.o: src/PID.cpp.o
+
+.PHONY : src/PID.o
+
+# target to build an object file
+src/PID.cpp.o:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/PID.cpp.o
+.PHONY : src/PID.cpp.o
+
+src/PID.i: src/PID.cpp.i
+
+.PHONY : src/PID.i
+
+# target to preprocess a source file
+src/PID.cpp.i:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.i
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/PID.cpp.i
+.PHONY : src/PID.cpp.i
+
+src/PID.s: src/PID.cpp.s
+
+.PHONY : src/PID.s
+
+# target to generate assembly for a file
+src/PID.cpp.s:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.s
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/PID.cpp.s
+.PHONY : src/PID.cpp.s
 
 src/gimbal_communication_node.o: src/gimbal_communication_node.cpp.o
 
@@ -224,6 +254,36 @@ src/gimbal_communication_node.cpp.s:
 	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.s
 .PHONY : src/gimbal_communication_node.cpp.s
 
+src/gimbal_control.o: src/gimbal_control.cpp.o
+
+.PHONY : src/gimbal_control.o
+
+# target to build an object file
+src/gimbal_control.cpp.o:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.o
+.PHONY : src/gimbal_control.cpp.o
+
+src/gimbal_control.i: src/gimbal_control.cpp.i
+
+.PHONY : src/gimbal_control.i
+
+# target to preprocess a source file
+src/gimbal_control.cpp.i:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.i
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.i
+.PHONY : src/gimbal_control.cpp.i
+
+src/gimbal_control.s: src/gimbal_control.cpp.s
+
+.PHONY : src/gimbal_control.s
+
+# target to generate assembly for a file
+src/gimbal_control.cpp.s:
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.s
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.s
+.PHONY : src/gimbal_control.cpp.s
+
 src/i2c_bus.o: src/i2c_bus.cpp.o
 
 .PHONY : src/i2c_bus.o
@@ -231,7 +291,7 @@ src/i2c_bus.o: src/i2c_bus.cpp.o
 # target to build an object file
 src/i2c_bus.cpp.o:
 	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.o
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o
 .PHONY : src/i2c_bus.cpp.o
 
 src/i2c_bus.i: src/i2c_bus.cpp.i
@@ -241,7 +301,7 @@ src/i2c_bus.i: src/i2c_bus.cpp.i
 # target to preprocess a source file
 src/i2c_bus.cpp.i:
 	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.i
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.i
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.i
 .PHONY : src/i2c_bus.cpp.i
 
 src/i2c_bus.s: src/i2c_bus.cpp.s
@@ -251,7 +311,7 @@ src/i2c_bus.s: src/i2c_bus.cpp.s
 # target to generate assembly for a file
 src/i2c_bus.cpp.s:
 	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.s
-	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/i2c_bus.dir/build.make gimbal_control/CMakeFiles/i2c_bus.dir/src/i2c_bus.cpp.s
+	cd /home/pi/ROS-Feature-Tracking/build && $(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.s
 .PHONY : src/i2c_bus.cpp.s
 
 # Help Target
@@ -262,16 +322,22 @@ help:
 	@echo "... depend"
 	@echo "... install/strip"
 	@echo "... install"
+	@echo "... edit_cache"
 	@echo "... GimbalControlNode"
 	@echo "... install/local"
 	@echo "... test"
-	@echo "... edit_cache"
+	@echo "... GimbalControlLib"
 	@echo "... rebuild_cache"
-	@echo "... i2c_bus"
 	@echo "... list_install_components"
+	@echo "... src/PID.o"
+	@echo "... src/PID.i"
+	@echo "... src/PID.s"
 	@echo "... src/gimbal_communication_node.o"
 	@echo "... src/gimbal_communication_node.i"
 	@echo "... src/gimbal_communication_node.s"
+	@echo "... src/gimbal_control.o"
+	@echo "... src/gimbal_control.i"
+	@echo "... src/gimbal_control.s"
 	@echo "... src/i2c_bus.o"
 	@echo "... src/i2c_bus.i"
 	@echo "... src/i2c_bus.s"

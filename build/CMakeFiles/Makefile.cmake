@@ -244,5 +244,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "vision_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "vision_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
   "gimbal_control/CMakeFiles/GimbalControlNode.dir/DependInfo.cmake"
-  "gimbal_control/CMakeFiles/i2c_bus.dir/DependInfo.cmake"
+  "gimbal_control/CMakeFiles/GimbalControlLib.dir/DependInfo.cmake"
   )

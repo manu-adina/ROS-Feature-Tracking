@@ -46,10 +46,10 @@
 /home/pi/ROS-Feature-Tracking/build/vision_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/install/strip.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/install.dir
+/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/edit_cache.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlNode.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/install/local.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/test.dir
-/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/edit_cache.dir
+/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlLib.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/rebuild_cache.dir
-/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/i2c_bus.dir
 /home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/list_install_components.dir
