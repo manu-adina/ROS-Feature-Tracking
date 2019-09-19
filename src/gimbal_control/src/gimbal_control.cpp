@@ -1,4 +1,6 @@
 #include "gimbal_control/gimbal_control.h"
+#include "vision_tracking/Position.h"
+#include "ros/ros.h"
 
 #define COMMAND_OFFSET 1023
 #define MAX_COMMAND 2037
@@ -29,7 +31,7 @@ GimbalControl::GimbalControl() {
     _pid_y.Begin(Kp_y,Ki_y,Kd_y);
 
     ros::NodeHandle gimbal_control_nh;
-    ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, &I2CBus::Send, &i2c_bus); //TODO
+    ros::Subscriber gimbal_control_sub = gimbal_control_nh.subscribe("vision_position", 1, &GimbalControl::compareCallback, this); //TODO
     ros::spin();
 }
 

@@ -1,11 +1,14 @@
 #include "PID.h"
 #include "i2c_bus.h"
+#include "vision_tracking/Position.h"
+#include "ros/ros.h"
+
 
 class GimbalControl {
     public:
         GimbalControl();
         ~GimbalControl();
-        void compareCallback();
+        void compareCallback(const vision_tracking::Position::ConstPtr &msg);
 
     private:
         PID _pid_x;
