@@ -4,10 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp" "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o"
   "/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_communication_node.cpp" "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o"
-  "/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control.cpp" "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o"
-  "/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp" "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o"
   )
 set(CMAKE_CXX_COMPILER_ID "GNU")
 
@@ -28,7 +25,9 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
-  "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/GimbalControlLib.dir/DependInfo.cmake"
+  "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/gimbal_control.dir/DependInfo.cmake"
+  "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/i2c_bus.dir/DependInfo.cmake"
+  "/home/pi/ROS-Feature-Tracking/build/gimbal_control/CMakeFiles/pid.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

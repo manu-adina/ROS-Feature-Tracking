@@ -22,13 +22,25 @@ ros/builtin_message_traits.h
 ros/message_operations.h
 -
 
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/PID.h
+
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/gimbal_control.h
+PID.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/PID.h
+i2c_bus.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/i2c_bus.h
+vision_tracking/Position.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/vision_tracking/Position.h
+ros/ros.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/ros/ros.h
+
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/i2c_bus.h
 string
 -
-vision_tracking/Position.h
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/vision_tracking/Position.h
 
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_communication_node.cpp
+gimbal_control/gimbal_control.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/gimbal_control.h
 gimbal_control/i2c_bus.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/i2c_bus.h
 vision_tracking/Position.h
@@ -37,28 +49,6 @@ ros/console.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/console.h
 ros/ros.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/ros.h
-
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
-gimbal_control/i2c_bus.h
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/i2c_bus.h
-iostream
--
-ros/ros.h
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/ros.h
-stdio.h
--
-stdlib.h
--
-fcntl.h
--
-linux/i2c-dev.h
--
-sys/ioctl.h
--
-string
--
-errno.h
--
 
 /home/pi/ros_catkin_ws/install_isolated/include/ros/advertise_options.h
 ros/forwards.h

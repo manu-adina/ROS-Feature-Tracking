@@ -1,4 +1,4 @@
-#include "gimbal_control/PID.h"
+#include "gimbal_control/pid.h"
 
 PID::PID() {}
 
@@ -9,17 +9,17 @@ void PID::Begin(double Kp, double Ki, double Kd) {
     _Ki = Ki;
     _Kd = Kd;
 
-    _p_error = 0;
-    _i_error = 0;
-    _d_error = 0;
+    _p_error = 0.0;
+    _i_error = 0.0;
+    _d_error = 0.0;
 }
 
-void PID::Update(int cte) {
+void PID::Update(double cte) {
     _d_error = cte - _p_error;
     _p_error = cte;
     _i_error += cte;
 }
 
 double PID::TotalError() {
-    return -_Kp * _p_error - _Kd * _d_error - _Ki * _i_error;
+    return _Kp * _p_error + _Kd * _d_error + _Ki * _i_error;
 }

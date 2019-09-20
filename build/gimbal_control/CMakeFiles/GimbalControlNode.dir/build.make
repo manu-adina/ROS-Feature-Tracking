@@ -70,61 +70,18 @@ gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.s"
 	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_communication_node.cpp -o CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.s
 
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o: gimbal_control/CMakeFiles/GimbalControlNode.dir/flags.make
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o: /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o -c /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.i"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp > CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.i
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.s"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp -o CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.s
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o: gimbal_control/CMakeFiles/GimbalControlNode.dir/flags.make
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o: /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o -c /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GimbalControlNode.dir/src/PID.cpp.i"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp > CMakeFiles/GimbalControlNode.dir/src/PID.cpp.i
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GimbalControlNode.dir/src/PID.cpp.s"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp -o CMakeFiles/GimbalControlNode.dir/src/PID.cpp.s
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o: gimbal_control/CMakeFiles/GimbalControlNode.dir/flags.make
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o: /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o -c /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control.cpp
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.i"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control.cpp > CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.i
-
-gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.s"
-	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control.cpp -o CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.s
-
 # Object files for target GimbalControlNode
 GimbalControlNode_OBJECTS = \
-"CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o" \
-"CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o" \
-"CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o" \
-"CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o"
+"CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o"
 
 # External object files for target GimbalControlNode
 GimbalControlNode_EXTERNAL_OBJECTS =
 
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_communication_node.cpp.o
-/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/i2c_bus.cpp.o
-/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/PID.cpp.o
-/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/src/gimbal_control.cpp.o
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make
-/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ROS-Feature-Tracking/devel/lib/libGimbalControlLib.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ROS-Feature-Tracking/devel/lib/libgimbal_control.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ROS-Feature-Tracking/devel/lib/libi2c_bus.so
+/home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ROS-Feature-Tracking/devel/lib/libpid.so
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /home/pi/ros_catkin_ws/install_isolated/lib/libroscpp.so
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libpthread.so
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_filesystem.so
@@ -145,7 +102,7 @@ GimbalControlNode_EXTERNAL_OBJECTS =
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libboost_atomic.so
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: /usr/lib/arm-linux-gnueabihf/libconsole_bridge.so.0.4
 /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode: gimbal_control/CMakeFiles/GimbalControlNode.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/pi/ROS-Feature-Tracking/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX executable /home/pi/ROS-Feature-Tracking/devel/lib/gimbal_control/GimbalControlNode"
 	cd /home/pi/ROS-Feature-Tracking/build/gimbal_control && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/GimbalControlNode.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

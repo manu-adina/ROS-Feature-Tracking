@@ -1,10 +1,12 @@
+#ifndef PID_H
+#define PID_H
 
 class PID {
     public:
         PID();
         ~PID();
         void Begin(double Kp, double Ki, double Kd);
-        void Update(int cte);
+        void Update(double cte);
         double TotalError();
 
     private:
@@ -15,3 +17,5 @@ class PID {
         double _i_error;
         double _d_error;
 };
+
+#endif

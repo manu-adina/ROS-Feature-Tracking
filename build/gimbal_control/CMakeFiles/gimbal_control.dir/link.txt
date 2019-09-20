@@ -1,0 +1,1 @@
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libgimbal_control.so -o /home/pi/ROS-Feature-Tracking/devel/lib/libgimbal_control.so CMakeFiles/gimbal_control.dir/src/gimbal_control.cpp.o CMakeFiles/gimbal_control.dir/src/i2c_bus.cpp.o CMakeFiles/gimbal_control.dir/src/PID.cpp.o 

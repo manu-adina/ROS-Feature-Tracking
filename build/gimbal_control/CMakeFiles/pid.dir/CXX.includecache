@@ -1,0 +1,14 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/PID.h
+
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/PID.cpp
+gimbal_control/PID.h
+/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/PID.h
+

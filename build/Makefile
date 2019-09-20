@@ -584,30 +584,30 @@ std_msgs_generate_messages_eus/fast:
 .PHONY : std_msgs_generate_messages_eus/fast
 
 #=============================================================================
-# Target rules for targets named GimbalControlNode
+# Target rules for targets named gimbal_control_node
 
 # Build rule for target.
-GimbalControlNode: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GimbalControlNode
-.PHONY : GimbalControlNode
+gimbal_control_node: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gimbal_control_node
+.PHONY : gimbal_control_node
 
 # fast build rule for target.
-GimbalControlNode/fast:
-	$(MAKE) -f gimbal_control/CMakeFiles/GimbalControlNode.dir/build.make gimbal_control/CMakeFiles/GimbalControlNode.dir/build
-.PHONY : GimbalControlNode/fast
+gimbal_control_node/fast:
+	$(MAKE) -f gimbal_control/CMakeFiles/gimbal_control_node.dir/build.make gimbal_control/CMakeFiles/gimbal_control_node.dir/build
+.PHONY : gimbal_control_node/fast
 
 #=============================================================================
-# Target rules for targets named GimbalControlLib
+# Target rules for targets named gimbal_control_lib
 
 # Build rule for target.
-GimbalControlLib: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 GimbalControlLib
-.PHONY : GimbalControlLib
+gimbal_control_lib: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 gimbal_control_lib
+.PHONY : gimbal_control_lib
 
 # fast build rule for target.
-GimbalControlLib/fast:
-	$(MAKE) -f gimbal_control/CMakeFiles/GimbalControlLib.dir/build.make gimbal_control/CMakeFiles/GimbalControlLib.dir/build
-.PHONY : GimbalControlLib/fast
+gimbal_control_lib/fast:
+	$(MAKE) -f gimbal_control/CMakeFiles/gimbal_control_lib.dir/build.make gimbal_control/CMakeFiles/gimbal_control_lib.dir/build
+.PHONY : gimbal_control_lib/fast
 
 # Help Target
 help:
@@ -654,8 +654,8 @@ help:
 	@echo "... std_msgs_generate_messages_py"
 	@echo "... rosgraph_msgs_generate_messages_nodejs"
 	@echo "... std_msgs_generate_messages_eus"
-	@echo "... GimbalControlNode"
-	@echo "... GimbalControlLib"
+	@echo "... gimbal_control_node"
+	@echo "... gimbal_control_lib"
 .PHONY : help
 
 

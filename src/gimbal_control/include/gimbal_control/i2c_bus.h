@@ -1,5 +1,8 @@
+#ifndef I2CBUS_H
+#define I2CBUS_H
+
 #include <string>
-#include "vision_tracking/Position.h"
+#include <cstdint>          // uintX_t
 
 class I2CBus {
     public:
@@ -11,3 +14,5 @@ class I2CBus {
         int _file;
         int _arduino_addr; 
 };
+
+#endif

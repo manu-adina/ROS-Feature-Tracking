@@ -68,7 +68,6 @@ gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.o: /home/p
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/xmlrpcpp/XmlRpcDecl.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/gimbal_control.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/xmlrpcpp/XmlRpcValue.h
 
-gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ROS-Feature-Tracking/devel/include/vision_tracking/Position.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ROS-Feature-Tracking/src/gimbal_control/include/gimbal_control/i2c_bus.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/advertise_options.h
@@ -89,7 +88,6 @@ gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_c
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/message.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/message_event.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/message_forward.h
-gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/message_operations.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/message_traits.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/names.h
 gimbal_control/CMakeFiles/GimbalControlLib.dir/src/i2c_bus.cpp.o: /home/pi/ros_catkin_ws/install_isolated/include/ros/node_handle.h

@@ -4,5 +4,5 @@ Name: gimbal_control
 Description: Description of gimbal_control
 Version: 1.0.0
 Cflags: -I/home/pi/ROS-Feature-Tracking/src/gimbal_control/include
-Libs: -L/home/pi/ROS-Feature-Tracking/devel/lib -lgimbal_control
+Libs: -L/home/pi/ROS-Feature-Tracking/devel/lib 
 Requires: roscpp

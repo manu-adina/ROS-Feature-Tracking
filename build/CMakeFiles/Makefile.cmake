@@ -243,6 +243,6 @@ set(CMAKE_DEPEND_INFO_FILES
   "vision_tracking/CMakeFiles/std_msgs_generate_messages_py.dir/DependInfo.cmake"
   "vision_tracking/CMakeFiles/rosgraph_msgs_generate_messages_nodejs.dir/DependInfo.cmake"
   "vision_tracking/CMakeFiles/std_msgs_generate_messages_eus.dir/DependInfo.cmake"
-  "gimbal_control/CMakeFiles/GimbalControlNode.dir/DependInfo.cmake"
-  "gimbal_control/CMakeFiles/GimbalControlLib.dir/DependInfo.cmake"
+  "gimbal_control/CMakeFiles/gimbal_control_node.dir/DependInfo.cmake"
+  "gimbal_control/CMakeFiles/gimbal_control_lib.dir/DependInfo.cmake"
   )

@@ -116,7 +116,7 @@ if(NOT "/home/pi/ROS-Feature-Tracking/src/gimbal_control/include " STREQUAL " ")
   endforeach()
 endif()
 
-set(libraries "gimbal_control")
+set(libraries "")
 foreach(library ${libraries})
   # keep build configuration keywords, target names and absolute libraries as-is
   if("${library}" MATCHES "^(debug|optimized|general)$")

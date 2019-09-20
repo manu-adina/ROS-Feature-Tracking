@@ -1,13 +1,9 @@
 #include "gimbal_control/i2c_bus.h"
-#include <iostream>
+#include <linux/i2c-dev.h>  // I2C SLAVE
+#include <fcntl.h>          // open() write()
+#include <sys/ioctl.h>      // ioctl()
+#include <errno.h>          // errno for Linux
 #include "ros/ros.h"
-#include <stdio.h>
-#include <stdlib.h>
-#include <fcntl.h> //open() write()
-#include <linux/i2c-dev.h> //I2C_SLAVE
-#include <sys/ioctl.h> //ioctl()
-#include <string>
-#include <errno.h> //errno for linux
 
 I2CBus::I2CBus() {};
 
