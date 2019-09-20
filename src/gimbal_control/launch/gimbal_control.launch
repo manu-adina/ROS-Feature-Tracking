@@ -1,3 +1,0 @@
-<launch>
-    <group ns = "gimbal_control" name = "sim" type = "gimbal_control_node" />
-    </group>

@@ -1,0 +1,6 @@
+<launch>
+    <group name = "gimbal_vision" >
+        <include file = "$(find vision_tracking)/config/vision_tracking_node.xml" /> 
+        <include file = "$(find gimbal_control)/config/gimbal_control_node.xml" />
+    </group>
+</launch>

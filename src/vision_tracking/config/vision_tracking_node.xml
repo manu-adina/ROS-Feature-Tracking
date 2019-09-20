@@ -1,0 +1,7 @@
+<launch>
+    <node pkg = "vision_tracking" type = "vision_tracking_node.py" name = "vision_tracking_node" >
+        <param name = "resolution_x" value = "640" />
+        <param name = "resolution_y" value = "320" />
+        <param name = "frame_rate" value = "30" />
+    </node>
+</launch>

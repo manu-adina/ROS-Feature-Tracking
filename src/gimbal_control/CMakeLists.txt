@@ -1,6 +1,7 @@
 cmake_minimum_required(VERSION 2.8.3)
 project(gimbal_control)
 find_package(catkin REQUIRED COMPONENTS roscpp vision_tracking)
+
 catkin_package(
     INCLUDE_DIRS include
     LIBRARIES ${PROJECT_MAME}

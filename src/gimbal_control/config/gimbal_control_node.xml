@@ -1,0 +1,19 @@
+<launch>
+    <node pkg = "gimbal_control" type = "gimbal_control_node" name = "gimbal_control_node" >
+
+        <param name = "Kp_x" value = "5.0"   />
+        <param name = "Ki_x" value = "0.001" />
+        <param name = "Kd_x" value = "0.001" />
+
+        <param name = "Kp_y" value = "5.0"   />
+        <param name = "Ki_y" value = "0.001" />
+        <param name = "Kd_y" value = "0.001" />
+    
+        <param name = "resolution_x" value = "640" />
+        <param name = "resolution_y" value = "480" />
+
+        <param name = "i2c_port" value = "/dev/i2c-1"  />
+        <param name = "arduino_address" value = "0x04" />
+
+    </node>
+</launch>
