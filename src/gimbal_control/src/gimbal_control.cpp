@@ -42,8 +42,11 @@ void GimbalControl::Run() {
 
 void GimbalControl::compareCallback(const vision_tracking::Position::ConstPtr &msg) {
 
-    //If a feature wasn't detected, don't do anything.
-    if(!msg->detected) return;
+    //If a feature wasn't detected, stop.
+    if(!msg->detected) {
+        _i2c_bus.Send(1023, 1023);
+        return;
+    }
 
       // Get vision_position from the message.
     int position_x = msg->position_x;
@@ -63,7 +66,7 @@ void GimbalControl::compareCallback(const vision_tracking::Position::ConstPtr &m
     ROS_INFO("PID Value X: %f \t PID Value Y: %f", _pid_x.TotalError(), _pid_y.TotalError());
 
     // Converting to 0 - 2047 space.
-    double speed_command_pan  = _pid_x.TotalError() + COMMAND_OFFSET;
+    double speed_command_pan  = COMMAND_OFFSET - _pid_x.TotalError();
     double speed_command_tilt = _pid_y.TotalError() + COMMAND_OFFSET;
 
     // Making sure the commands are within 0 - 2047 domain.

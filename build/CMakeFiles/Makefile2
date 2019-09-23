@@ -628,10 +628,10 @@ clean: vision_tracking/CMakeFiles/roscpp_generate_messages_py.dir/clean
 # Target rules for target vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir
 
 # All Build rule for target.
-vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_nodejs.dir/all
-vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_lisp.dir/all
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_eus.dir/all
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_cpp.dir/all
+vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_nodejs.dir/all
+vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_lisp.dir/all
 vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/all: vision_tracking/CMakeFiles/vision_tracking_generate_messages_py.dir/all
 	$(MAKE) -f vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build.make vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/depend
 	$(MAKE) -f vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build.make vision_tracking/CMakeFiles/vision_tracking_generate_messages.dir/build

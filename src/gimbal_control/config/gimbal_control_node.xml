@@ -1,11 +1,11 @@
 <launch>
     <node pkg = "gimbal_control" type = "gimbal_control_node" name = "gimbal_control_node" output="screen">
 
-        <param name = "Kp_x" value = "5.0"   />
+        <param name = "Kp_x" value = "1.0"   />
         <param name = "Ki_x" value = "0.001" />
         <param name = "Kd_x" value = "0.001" />
 
-        <param name = "Kp_y" value = "5.0"   />
+        <param name = "Kp_y" value = "1.5"   />
         <param name = "Ki_y" value = "0.001" />
         <param name = "Kd_y" value = "0.001" />
 
