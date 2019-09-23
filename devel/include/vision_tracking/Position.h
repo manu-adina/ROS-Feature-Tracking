@@ -24,16 +24,21 @@ struct Position_
   typedef Position_<ContainerAllocator> Type;
 
   Position_()
-    : position_x(0)
+    : detected(false)
+    , position_x(0)
     , position_y(0)  {
     }
   Position_(const ContainerAllocator& _alloc)
-    : position_x(0)
+    : detected(false)
+    , position_x(0)
     , position_y(0)  {
   (void)_alloc;
     }
 
 
+
+   typedef uint8_t _detected_type;
+  _detected_type detected;
 
    typedef uint16_t _position_x_type;
   _position_x_type position_x;
@@ -119,12 +124,12 @@ struct MD5Sum< ::vision_tracking::Position_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "69cb99f109ace36b4ffea89389ff8940";
+    return "08f7510425c59ccb0f8a2361634fcb13";
   }
 
   static const char* value(const ::vision_tracking::Position_<ContainerAllocator>&) { return value(); }
-  static const uint64_t static_value1 = 0x69cb99f109ace36bULL;
-  static const uint64_t static_value2 = 0x4ffea89389ff8940ULL;
+  static const uint64_t static_value1 = 0x08f7510425c59ccbULL;
+  static const uint64_t static_value2 = 0x0f8a2361634fcb13ULL;
 };
 
 template<class ContainerAllocator>
@@ -143,7 +148,8 @@ struct Definition< ::vision_tracking::Position_<ContainerAllocator> >
 {
   static const char* value()
   {
-    return "uint16 position_x\n"
+    return "bool detected\n"
+"uint16 position_x\n"
 "uint16 position_y\n"
 ;
   }
@@ -163,6 +169,7 @@ namespace serialization
   {
     template<typename Stream, typename T> inline static void allInOne(Stream& stream, T m)
     {
+      stream.next(m.detected);
       stream.next(m.position_x);
       stream.next(m.position_y);
     }
@@ -183,6 +190,8 @@ struct Printer< ::vision_tracking::Position_<ContainerAllocator> >
 {
   template<typename Stream> static void stream(Stream& s, const std::string& indent, const ::vision_tracking::Position_<ContainerAllocator>& v)
   {
+    s << indent << "detected: ";
+    Printer<uint8_t>::stream(s, indent + "  ", v.detected);
     s << indent << "position_x: ";
     Printer<uint16_t>::stream(s, indent + "  ", v.position_x);
     s << indent << "position_y: ";

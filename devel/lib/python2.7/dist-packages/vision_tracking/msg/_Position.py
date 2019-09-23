@@ -7,14 +7,15 @@ import struct
 
 
 class Position(genpy.Message):
-  _md5sum = "69cb99f109ace36b4ffea89389ff8940"
+  _md5sum = "08f7510425c59ccb0f8a2361634fcb13"
   _type = "vision_tracking/Position"
   _has_header = False #flag to mark the presence of a Header object
-  _full_text = """uint16 position_x
+  _full_text = """bool detected
+uint16 position_x
 uint16 position_y
 """
-  __slots__ = ['position_x','position_y']
-  _slot_types = ['uint16','uint16']
+  __slots__ = ['detected','position_x','position_y']
+  _slot_types = ['bool','uint16','uint16']
 
   def __init__(self, *args, **kwds):
     """
@@ -24,7 +25,7 @@ uint16 position_y
     changes.  You cannot mix in-order arguments and keyword arguments.
 
     The available fields are:
-       position_x,position_y
+       detected,position_x,position_y
 
     :param args: complete set of field values, in .msg order
     :param kwds: use keyword arguments corresponding to message field names
@@ -33,11 +34,14 @@ uint16 position_y
     if args or kwds:
       super(Position, self).__init__(*args, **kwds)
       #message fields cannot be None, assign default values for those that are
+      if self.detected is None:
+        self.detected = False
       if self.position_x is None:
         self.position_x = 0
       if self.position_y is None:
         self.position_y = 0
     else:
+      self.detected = False
       self.position_x = 0
       self.position_y = 0
 
@@ -54,7 +58,7 @@ uint16 position_y
     """
     try:
       _x = self
-      buff.write(_get_struct_2H().pack(_x.position_x, _x.position_y))
+      buff.write(_get_struct_B2H().pack(_x.detected, _x.position_x, _x.position_y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -67,8 +71,9 @@ uint16 position_y
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.position_x, _x.position_y,) = _get_struct_2H().unpack(str[start:end])
+      end += 5
+      (_x.detected, _x.position_x, _x.position_y,) = _get_struct_B2H().unpack(str[start:end])
+      self.detected = bool(self.detected)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -82,7 +87,7 @@ uint16 position_y
     """
     try:
       _x = self
-      buff.write(_get_struct_2H().pack(_x.position_x, _x.position_y))
+      buff.write(_get_struct_B2H().pack(_x.detected, _x.position_x, _x.position_y))
     except struct.error as se: self._check_types(struct.error("%s: '%s' when writing '%s'" % (type(se), str(se), str(locals().get('_x', self)))))
     except TypeError as te: self._check_types(ValueError("%s: '%s' when writing '%s'" % (type(te), str(te), str(locals().get('_x', self)))))
 
@@ -96,8 +101,9 @@ uint16 position_y
       end = 0
       _x = self
       start = end
-      end += 4
-      (_x.position_x, _x.position_y,) = _get_struct_2H().unpack(str[start:end])
+      end += 5
+      (_x.detected, _x.position_x, _x.position_y,) = _get_struct_B2H().unpack(str[start:end])
+      self.detected = bool(self.detected)
       return self
     except struct.error as e:
       raise genpy.DeserializationError(e) #most likely buffer underfill
@@ -106,9 +112,9 @@ _struct_I = genpy.struct_I
 def _get_struct_I():
     global _struct_I
     return _struct_I
-_struct_2H = None
-def _get_struct_2H():
-    global _struct_2H
-    if _struct_2H is None:
-        _struct_2H = struct.Struct("<2H")
-    return _struct_2H
+_struct_B2H = None
+def _get_struct_B2H():
+    global _struct_B2H
+    if _struct_B2H is None:
+        _struct_B2H = struct.Struct("<B2H")
+    return _struct_B2H

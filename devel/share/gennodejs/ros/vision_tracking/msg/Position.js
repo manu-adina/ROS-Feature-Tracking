@@ -18,10 +18,17 @@ class Position {
   constructor(initObj={}) {
     if (initObj === null) {
       // initObj === null is a special case for deserialization where we don't initialize fields
+      this.detected = null;
       this.position_x = null;
       this.position_y = null;
     }
     else {
+      if (initObj.hasOwnProperty('detected')) {
+        this.detected = initObj.detected
+      }
+      else {
+        this.detected = false;
+      }
       if (initObj.hasOwnProperty('position_x')) {
         this.position_x = initObj.position_x
       }
@@ -39,6 +46,8 @@ class Position {
 
   static serialize(obj, buffer, bufferOffset) {
     // Serializes a message object of type Position
+    // Serialize message field [detected]
+    bufferOffset = _serializer.bool(obj.detected, buffer, bufferOffset);
     // Serialize message field [position_x]
     bufferOffset = _serializer.uint16(obj.position_x, buffer, bufferOffset);
     // Serialize message field [position_y]
@@ -50,6 +59,8 @@ class Position {
     //deserializes a message object of type Position
     let len;
     let data = new Position(null);
+    // Deserialize message field [detected]
+    data.detected = _deserializer.bool(buffer, bufferOffset);
     // Deserialize message field [position_x]
     data.position_x = _deserializer.uint16(buffer, bufferOffset);
     // Deserialize message field [position_y]
@@ -58,7 +69,7 @@ class Position {
   }
 
   static getMessageSize(object) {
-    return 4;
+    return 5;
   }
 
   static datatype() {
@@ -68,12 +79,13 @@ class Position {
 
   static md5sum() {
     //Returns md5sum for a message object
-    return '69cb99f109ace36b4ffea89389ff8940';
+    return '08f7510425c59ccb0f8a2361634fcb13';
   }
 
   static messageDefinition() {
     // Returns full string definition for message
     return `
+    bool detected
     uint16 position_x
     uint16 position_y
     
@@ -86,6 +98,13 @@ class Position {
       msg = {};
     }
     const resolved = new Position(null);
+    if (msg.detected !== undefined) {
+      resolved.detected = msg.detected;
+    }
+    else {
+      resolved.detected = false
+    }
+
     if (msg.position_x !== undefined) {
       resolved.position_x = msg.position_x;
     }

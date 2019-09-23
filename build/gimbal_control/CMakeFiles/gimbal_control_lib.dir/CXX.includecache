@@ -44,20 +44,6 @@ cstdint
 gimbal_control/gimbal_control.h
 /home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/gimbal_control.h
 
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/i2c_bus.cpp
-gimbal_control/i2c_bus.h
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/gimbal_control/i2c_bus.h
-linux/i2c-dev.h
--
-fcntl.h
--
-sys/ioctl.h
--
-errno.h
--
-ros/ros.h
-/home/pi/ROS-Feature-Tracking/src/gimbal_control/src/ros/ros.h
-
 /home/pi/ros_catkin_ws/install_isolated/include/ros/advertise_options.h
 ros/forwards.h
 /home/pi/ros_catkin_ws/install_isolated/include/ros/ros/forwards.h

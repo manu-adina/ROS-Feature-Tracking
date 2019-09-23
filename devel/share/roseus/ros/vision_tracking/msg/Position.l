@@ -14,18 +14,23 @@
 
 (defclass vision_tracking::Position
   :super ros::object
-  :slots (_position_x _position_y ))
+  :slots (_detected _position_x _position_y ))
 
 (defmethod vision_tracking::Position
   (:init
    (&key
+    ((:detected __detected) nil)
     ((:position_x __position_x) 0)
     ((:position_y __position_y) 0)
     )
    (send-super :init)
+   (setq _detected __detected)
    (setq _position_x (round __position_x))
    (setq _position_y (round __position_y))
    self)
+  (:detected
+   (&optional __detected)
+   (if __detected (setq _detected __detected)) _detected)
   (:position_x
    (&optional __position_x)
    (if __position_x (setq _position_x __position_x)) _position_x)
@@ -35,6 +40,8 @@
   (:serialization-length
    ()
    (+
+    ;; bool _detected
+    1
     ;; uint16 _position_x
     2
     ;; uint16 _position_y
@@ -44,6 +51,8 @@
    (&optional strm)
    (let ((s (if strm strm
               (make-string-output-stream (send self :serialization-length)))))
+     ;; bool _detected
+       (if _detected (write-byte -1 s) (write-byte 0 s))
      ;; uint16 _position_x
        (write-word _position_x s)
      ;; uint16 _position_y
@@ -52,6 +61,8 @@
      (if (null strm) (get-output-stream-string s))))
   (:deserialize
    (buf &optional (ptr- 0))
+   ;; bool _detected
+     (setq _detected (not (= 0 (sys::peek buf ptr- :char)))) (incf ptr- 1)
    ;; uint16 _position_x
      (setq _position_x (sys::peek buf ptr- :short)) (incf ptr- 2)
    ;; uint16 _position_y
@@ -60,16 +71,17 @@
    self)
   )
 
-(setf (get vision_tracking::Position :md5sum-) "69cb99f109ace36b4ffea89389ff8940")
+(setf (get vision_tracking::Position :md5sum-) "08f7510425c59ccb0f8a2361634fcb13")
 (setf (get vision_tracking::Position :datatype-) "vision_tracking/Position")
 (setf (get vision_tracking::Position :definition-)
-      "uint16 position_x
+      "bool detected
+uint16 position_x
 uint16 position_y
 
 ")
 
 
 
-(provide :vision_tracking/Position "69cb99f109ace36b4ffea89389ff8940")
+(provide :vision_tracking/Position "08f7510425c59ccb0f8a2361634fcb13")
 
 

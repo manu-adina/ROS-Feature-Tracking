@@ -10,12 +10,15 @@ import time
 def vision_tracking_node():
     pub = rospy.Publisher('vision_position', Position, queue_size=1)
     rospy.init_node('vision_tracking_node', anonymous=True)
-    rate = rospy.Rate(32) #  10 Hz
 
-# Inserting data into messages.
-#    msg = Position()
-#    msg.position_x = 500
-#    msg.position_y = 500
+    # Getting parameters from the config file
+    resolution_x = rospy.get_param('/vision_tracking_node/resolution_x')
+    resolution_y = rospy.get_param('/vision_tracking_node/resolution_y')
+    frame_rate = rospy.get_param('/vision_tracking_node/frame_rate')
+    cam_saturation = rospy.get_param('/vision_tracking_node/saturation')
+    cam_brightness = rospy.get_param('/vision_tracking_node/brightness')
+
+    rate = rospy.Rate(frame_rate)
 
     # Defining boundaries to track the ball.
     lower_boundary = (29, 86, 6)
@@ -25,7 +28,7 @@ def vision_tracking_node():
     pts = deque(maxlen=30)
 
     # Start webcam.
-    vs = PiVideoStream()
+    vs = PiVideoStream(resolution=(resolution_x,resolution_y), framerate=frame_rate, saturation=cam_saturation, brightness=cam_brightness)
     vs.start()
     time.sleep(2)
 
@@ -38,7 +41,6 @@ def vision_tracking_node():
         if frame is None:
             break
 
-        # TODO: May need to resize.
         blurred = cv2.GaussianBlur(frame, (11, 11), 0)
         hsv = cv2.cvtColor(blurred, cv2.COLOR_BGR2HSV)
         mask = cv2.inRange(hsv, lower_boundary, upper_boundary)
@@ -53,14 +55,20 @@ def vision_tracking_node():
         if len(cnts) > 0:
             c = max(cnts, key = cv2.contourArea)
             ((x, y), radius) = cv2.minEnclosingCircle(c)
+
+            msg.detected = True
             msg.position_x = x
             msg.position_y = y
+
             M = cv2.moments(c)
             center = (int(M["m10"] / M["m00"]), int(M["m01"] / M["m00"]))
 
             if radius > 10:
                 cv2.circle(frame, (int(x), int(y)), int(radius), (0, 255, 255), 2)
                 cv2.circle(frame, center, 5, (0, 255, 255), -1)
+
+        else:
+            msg.detected = False
 
         pts.appendleft(center)
 
